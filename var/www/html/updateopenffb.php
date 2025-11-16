@@ -20,7 +20,7 @@ if ($confirm == "yes"){
 
 echo '<br>';
 ini_set('output_buffering', false);
-    $handle = popen('sudo /root/update-openffb.sh', 'r');
+    $handle = popen('sudo bash /root/update-openffb.sh', 'r');
     while(!feof($handle)) {
       $buffer = fgets($handle);
       echo "$buffer";

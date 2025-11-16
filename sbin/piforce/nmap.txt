@@ -1,2 +1,2 @@
-# Nmap 7.70 scan initiated Fri Oct  8 13:27:00 2021 as: nmap --open -oG /sbin/piforce/nmap.txt -p10703 192.168.0.15/24
-# Nmap done at Fri Oct  8 13:27:03 2021 -- 256 IP addresses (6 hosts up) scanned in 2.67 seconds
+# Nmap 7.70 scan initiated Thu Feb 10 16:32:06 2022 as: nmap --open -oG /sbin/piforce/nmap.txt -p10703 192.168.0.15/24
+# Nmap done at Thu Feb 10 16:32:13 2022 -- 256 IP addresses (9 hosts up) scanned in 7.51 seconds

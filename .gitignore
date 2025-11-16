@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/*.log
+build/*
+*.dSYM
+*.ch8
+\#Games
