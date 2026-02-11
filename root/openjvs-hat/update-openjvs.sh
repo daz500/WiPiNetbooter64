@@ -40,8 +40,12 @@ echo 'Cleanup Complete'
 echo ''
 echo 'Restoring config file ...'
 cp /root/config /etc/openjvs/config
-echo 'Creating pwr_button.disabled file'
+echo 'Disabling non necessary devices'
 touch /etc/openjvs/devices/pwr_button.disabled
+touch /etc/openjvs/devices/vc4-hdmi-0.disable
+touch /etc/openjvs/devices/vc4-hdmi-0-hdmi-jack.disabled
+touch /etc/openjvs/devices/vc4-hdmi-1-hdmi-jack.disabled
+touch /etc/openjvs/devices/vc4-hdmi-1.disable
 else
 echo 'No Internet Connection Detected'
 fi

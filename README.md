@@ -1,19 +1,15 @@
 # WiPiNetbooter64
 
-Port of chunksin's WiPiNetbooter to run into a 64 bits linux.
+Port of chunksin's WiPiNetbooter to run into an updated Debian Trixie 64 bits linux.
 
-<br>**Raspberry PI 3 and 4 (DietPi with Debian Bullseye)**
+, for a correct usage of logitech wheel drivers, OpenFFB, OpenJVS and FFB Controller for racing games, some fixes and improvements.
 
-Full image download link: https://mega.nz/folder/ch8nQZhK#jLzZuOJfiTNv_qNEmWqn4g
+<br>** Raspberry PI 4 and 5 (Debian Trixie)**
 
-<br>**BETA Raspberry PI 5 (DietPi with Debian Trixie)**
-
-Initial stage beta version!
-
-Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LWQ)
+Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LWQ/folder/j0oAQRLC)
 
 <br>Changes:
-1. 64 bits Operating System (DietPi_RPi-ARMv8-Bullseye)
+1. 64 bits Operating System (Debian Trixie manually created minimal image to fit into an 32GB SD card)
 2. Fully functional integration between FFB Controller Hardware, OpenJVS, OpenFFB and New-lg4ff wheel driver for force feedback events on supported games
 3. New wipi 64 bits package
 4. Logitech New-lg4ff driver updated to suport FFB on Logitech wheels (https://github.com/berarma/new-lg4ff)
@@ -28,14 +24,15 @@ Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LW
 13. Fixed card emulator for F-Zero (/var/www/html/launchcard.php)
 14. Created a script to set the correct IP for Mario Kart GP camera on eth0 after game is launched (/root/mariokart_camera.sh)
 15. Corrected openjvs game mapping for king-of-route-66 (romsinfo.csv)
+16. Compiled wipi64-mjpg-streamer for 64 bits with necessary api code customization for Mario Kart Camera
+17. Using OpenJVS update for new GPIO logic by Fredobedo (https://github.com/Fredobedo/OpenJVS/)
+18. Single image that supports both raspberry pi 4 and 5 (not tested on 3 yet)
+19. SD card interchangeable between rpi 4 and rpi5 (automatically updates serial ports on all scripts)
 
 TODO:
 1. Add an apt source to update wipi packages
 2. Test with Lindbergh hardware (Naomi/Naomi2/Triforce/Chihiro - OK)
-3. Test NFC
-4. Test OpenFFB with FFB Controller on Triforce (need to map MIDI connector and pins)
-5. Test OpenFFB with FFB Controller on Chihiro
-
+3. Test image with Raspberry PI 3 hardware (has documented limitations in original Wipi)
 
 ## Card Reader Emulator Pinouts
 

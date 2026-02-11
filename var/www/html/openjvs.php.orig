@@ -5,7 +5,7 @@ echo '<html lang="en"><head><meta charset="utf-8"><title>WiPi Netbooter</title>'
 echo '<link rel="stylesheet" href="css/sidebarstyles.css">';
 
 $rotarymode = file_get_contents('/sbin/piforce/rotarymode.txt');
-$file = '/boot/firmware/config.txt';
+$file = '/boot/config.txt';
 $searchfor = 'disable-bt';
 
 $contents = file_get_contents($file);
@@ -24,7 +24,7 @@ $ojvsfile = '/etc/openjvs/config';
 $searchfor = 'ttyAMA';
 $contents = file_get_contents($ojvsfile);
 $pattern = preg_quote($searchfor, '/');
-$pattern = "/^(?!#).*$pattern.*\$/m";
+$pattern = "/^.*$pattern.*\$/m";
 if(preg_match_all($pattern, $contents, $matches)){
     $openjvshat = 'enabled';
 }

@@ -40,6 +40,9 @@ with open('/sbin/piforce/hatserial.txt') as hatfile:
 with open('/sbin/piforce/servermode.txt') as srvfile:
     srvmode = srvfile.readline()
 
+with open('/sbin/piforce/rpiversion.txt') as rpiversionfile:
+    rpiversion = rpiversionfile.readline()
+
 activedimm = sys.argv[2]
 
 print("Wipiloader script started")
@@ -56,15 +59,16 @@ if (openjvs == 'openon'):
         for row in filereader:
             dimmdict[row[1]] = row[3]
     if (dimmdict[activedimm] == 'on'):
-        openjvsCommand1 = 'killall -9 openjvs > /var/log/openjvs/openjvs.log 2>&1'
+        openjvsCommand1 = 'sudo killall -9 openjvs > /var/log/openjvs/openjvs.log 2>&1'
         os.system(openjvsCommand1)
         print("Starting OpenJVS with mapping file", sys.argv[5])
         openjvsCommand2 = 'sudo openjvs '+sys.argv[5]+' >> /var/log/openjvs/openjvs.log 2>&1 &'
         os.system(openjvsCommand2)
 
 if (ffbmode == 'ffbon'):
-    ffbCommand1 = 'killall -9 openffb > /var/log/openffb/openffb.log 2>&1'
+    ffbCommand1 = 'sudo killall -9 openffb > /var/log/openffb/openffb.log 2>&1'
     os.system(ffbCommand1)
+    sleep(3);
     print("Starting OpenFFB with mapping file", sys.argv[6])
     ffbCommand2 = 'sudo openffb -h=0 -gp='+sys.argv[6]+' >> /var/log/openffb/openffb.log 2>&1 &'
     os.system(ffbCommand2)
@@ -92,7 +96,12 @@ if (emumode == 'auto'):
     else:
         emuport = '/dev/ttyUSB0'
     if (hatserial == 'hatserialon'):
-        emuport = '/dev/ttyAMA2'
+        if ('5' in rpiversion):
+            emuport = '/dev/ttyAMA3'
+        elif ('4' in rpiversion):
+            emuport = '/dev/ttyAMA4'
+        else:
+            emuport = '/dev/ttyUSB0'
 
     if ('initial_d' in romfile):
         if ('initial_d_3' in romfile):

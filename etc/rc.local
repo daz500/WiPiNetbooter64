@@ -20,4 +20,13 @@ fi
 # Run check.py
 sudo python3 /sbin/piforce/check.py &
 
+# Update RPI Hardware model
+sudo /sbin/piforce/rpi_model.sh >> /var/log/rpi_model_serial.log
+
+# Update serial device for each rpi version
+sudo /sbin/piforce/rpi_serial.sh >> /var/log/rpi_model_serial.log
+
+# Ensure rfkill will not block any network interface
+sudo rfkill unblock all
+
 exit 0

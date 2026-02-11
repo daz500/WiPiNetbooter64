@@ -27,7 +27,11 @@ echo 'Build Complete'
 echo ''
 echo 'Installing ...'
 echo ''
+sudo make clean
 sudo make install
+cd build
+sudo cmake --install .
+cd ..
 echo ''
 echo 'Install Complete'
 echo 'Cleaning Up ...'

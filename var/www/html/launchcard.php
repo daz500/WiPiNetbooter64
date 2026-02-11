@@ -11,10 +11,11 @@ echo '<section><center><p>';
 $launchmode = $_GET["launchmode"];
 $emuport = '';
 $devices = array();
-$devices = glob('/dev' . '/ttyS*');
+$devices = glob('/dev' . '/ttyUSB*');
 $dropfolder = '/var/log/activecard';
 $isdirempty = !(new \FilesystemIterator($dropfolder))->valid();
 $hatserial = file_get_contents('/sbin/piforce/hatserial.txt');
+$rpiversion = file_get_contents('/sbin/piforce/rpiversion.txt');
 
 if ($mode == 'idas' || $mode == 'id2' || $mode == 'id3'){
 $emumode = 'id';
@@ -47,7 +48,13 @@ else{
 $emuport = '/dev/ttyUSB0';
 }
 if ($hatserial == 'hatserialon'){
-$emuport = '/dev/ttyAMA2';
+   if ($rpiversion == '5'){
+      $emuport = '/dev/ttyAMA3';
+   } else if ($rpiversion == '4'){
+      $emuport = '/dev/ttyAMA4';
+   } else {
+     $emuport = '/dev/ttyUSB0';
+   }
 }
 
 if ($launchmode == "manual"){
