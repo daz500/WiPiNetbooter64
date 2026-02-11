@@ -27,6 +27,7 @@ Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LW
 18. Single image that supports both raspberry pi 4 and 5 (not tested on 3 yet)
 19. SD card interchangeable between rpi 4 and rpi5 (automatically updates serial ports on all scripts)
 20. Full support for Naomi, Naomi 2, Triforce and Chihiro boards
+21. Support for Argon NVMe SSDs
 
 TODO:
 1. Add an apt source to update wipi packages
