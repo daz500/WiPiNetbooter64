@@ -26,11 +26,12 @@ Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LW
 17. Using OpenJVS update for new GPIO logic by Fredobedo (https://github.com/Fredobedo/OpenJVS/)
 18. Single image that supports both raspberry pi 4 and 5 (not tested on 3 yet)
 19. SD card interchangeable between rpi 4 and rpi5 (automatically updates serial ports on all scripts)
+20. Full support for Naomi, Naomi 2, Triforce and Chihiro boards
 
 TODO:
 1. Add an apt source to update wipi packages
-2. Test with Lindbergh hardware (Naomi/Naomi2/Triforce/Chihiro - OK)
-3. Test image with Raspberry PI 3 hardware (has documented limitations in original Wipi)
+2. Test image with Raspberry PI 3 hardware (has documented limitations in original Wipi)
+3. Usage of 2 card reader emulators at the same time for linked cabinets
 
 ## Card Reader Emulator Pinouts
 
