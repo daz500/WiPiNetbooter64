@@ -2,9 +2,7 @@
 
 Port of chunksin's WiPiNetbooter to run into an updated Debian Trixie 64 bits linux.
 
-, for a correct usage of logitech wheel drivers, OpenFFB, OpenJVS and FFB Controller for racing games, some fixes and improvements.
-
-<br>** Raspberry PI 4 and 5 (Debian Trixie)**
+## Raspberry PI 4 and 5 (Debian Trixie)
 
 Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LWQ/folder/j0oAQRLC)
 
