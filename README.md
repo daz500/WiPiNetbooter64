@@ -2,7 +2,7 @@
 
 Port of chunksin's WiPiNetbooter to run into an updated Debian Trixie 64 bits linux.
 
-## Raspberry PI 4 and 5 (Debian Trixie)
+## Raspberry PI 3B, 4 and 5 (Debian Trixie)
 
 Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LWQ/folder/j0oAQRLC)
 
@@ -28,11 +28,11 @@ Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LW
 19. SD card interchangeable between rpi 4 and rpi5 (automatically updates serial ports on all scripts)
 20. Full support for Naomi, Naomi 2, Triforce and Chihiro boards
 21. Support for Argon NVMe SSDs
+22. Raspberry PI 3B hardware (OpenJVS Hat Serial port for card emulator will not work due to uart limitations)
 
 TODO:
 1. Add an apt source to update wipi packages
-2. Test image with Raspberry PI 3 hardware (has documented limitations in original Wipi)
-3. Usage of 2 card reader emulators at the same time for linked cabinets
+2. Usage of 2 card reader emulators at the same time for linked cabinets
 
 ## Card Reader Emulator Pinouts
 

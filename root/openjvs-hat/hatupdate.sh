@@ -7,10 +7,10 @@ if [ $VER = "3" ]; then
 if ! grep -Fxq "dtoverlay=disable-bt" /boot/firmware/config.txt; then
    echo -e "\n" | sudo tee -a /boot/firmware/config.txt
    echo "dtoverlay=disable-bt" | sudo tee -a /boot/firmware/config.txt
-   sudo systemctl disable hciuart
+   sudo systemctl disable bluetooth
 else
    echo "Entries already found!"
-   sudo systemctl disable hciuart
+   sudo systemctl disable bluetooth
 fi
    echo "Copying OpenJVS config file"
    sudo cp /root/openjvs-hat/config.pi3hat /etc/openjvs/config
