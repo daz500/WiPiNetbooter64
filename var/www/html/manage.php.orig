@@ -9,11 +9,8 @@ echo '<section><center><p>';
 
 <h1><a href=setup.php>Manage WiPi</a></h1>
 <br><div class="box2">
-<a href="backup.php">Backup</a></div><br>
+<a href="filemanager.php">File Manager</a></div><br>
 <div class="box2">
 <a href="logdownload.php">Download Logs</a></div><br>
 <div class="box2">
-<a href="filemanager.php">File Manager</a></div><br>
-<div class="box2">
 <a href="update.php">WiPi Updater</a></div><br>
-<div class="box2">

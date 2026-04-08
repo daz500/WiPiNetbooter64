@@ -2,7 +2,6 @@
 
 SERVICE="host_debug_server"
 BASE_DIR="/sbin/netboot"
-VENV_PY="/opt/netboot-venv/bin/python"
 PORT="8080"
 
 # Environment variables to silence Flask / Werkzeug logs (production mode)
@@ -29,7 +28,7 @@ if [[ "$1" == "start" ]]; then
     }
 
     # Start the server using the virtualenv Python
-    "$VENV_PY" "$SERVICE" -p "$PORT" --config "$BASE_DIR/config.yaml" >/dev/null 2>&1 &
+    python "$SERVICE" -p "$PORT" --config "$BASE_DIR/config.yaml" >/dev/null 2>&1 &
     PID=$!
 
     # Give the process time to fail fast if something is wrong

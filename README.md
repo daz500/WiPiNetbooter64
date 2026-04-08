@@ -28,11 +28,12 @@ Full image download link: (https://mega.nz/folder/D4hyHACR#WRjBIlZJ9JPfDcaYOz9LW
 19. SD card interchangeable between rpi 4 and rpi5 (automatically updates serial ports on all scripts)
 20. Full support for Naomi, Naomi 2, Triforce and Chihiro boards
 21. Support for Argon NVMe SSDs
-22. Raspberry PI 3B hardware (OpenJVS Hat Serial port for card emulator will not work due to uart limitations)
+22. Backup Manager to save and restore Wipi configurations
+23. Raspberry PI 3B hardware (OpenJVS Hat Serial port for card emulator will not work due to uart limitations)
 
 TODO:
 1. Add an apt source to update wipi packages
-2. Usage of 2 card reader emulators at the same time for linked cabinets
+2. Make network modes to use NetworkManager
 
 ## Card Reader Emulator Pinouts
 
