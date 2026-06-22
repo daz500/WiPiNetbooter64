@@ -1,4 +1,5 @@
 # WiPiNetbooter64
+This is a fork from https://github.com/cassianoperin/WiPiNetbooter64 which I have created since its not possible to flag issues on that fork.
 
 Port of chunksin's WiPiNetbooter to run into an updated Debian Trixie 64 bits linux.
 
